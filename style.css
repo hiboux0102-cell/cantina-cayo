@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=UnifrakturCook:wght@700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'EB Garamond', 'Georgia', serif;
+  background: linear-gradient(135deg, #ece0c8 0%, #eecb88 100%);
+  color: #3a2a14;
+  min-height: 100vh;
+  transition: background 1s;
+}
+
+.parchment-container {
+  max-width: 980px;
+  margin: 40px auto 0 auto;
+  background: #f8f0de url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+  border: 60px solid transparent;
+  border-image: url('https://i.imgur.com/0W4T6zV.png') 100 round;
+  box-shadow:
+    0 0 80px 12px #a87c38,
+    0 0 0 25px #4a2c0a40 inset,
+    0 0 45px 0 #7b3f10 inset;
+  padding: 40px 40px 30px 40px;
+  position: relative;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(50px);}
+  to   { opacity: 1; transform: none;}
+}
+
+header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8em;
+  letter-spacing: 4px;
+  color: #768d2f;
+  text-shadow: 1px 1px 0 #e7d8b8, 0 0 10px #e7d8b8;
+  font-family: 'UnifrakturCook', 'EB Garamond', 'Georgia', serif;
+  animation: popIn 1s;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.7);}
+  to   { opacity: 1; transform: scale(1);}
+}
+
+header p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #adbd71;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+nav {
+  text-align: center;
+  margin: 30px 0 20px 0;
+}
+
+nav a {
+  font-family: 'EB Garamond', serif;
+  color: #768d2f;
+  background: #ede1c2;
+  border: 2px solid #cfdb8b;
+  padding: 8px 18px;
+  margin: 0 10px;
+  text-decoration: none;
+  border-radius: 14px;
+  font-size: 1.15em;
+  box-shadow: 1px 1px 0 #e7d8b8;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  font-weight: bold;
+}
+nav a:hover, nav a:focus {
+  background: #f6e8c5;
+  color: #3a2a14;
+  transform: translateY(-2px) scale(1.08);
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=980&q=80') no-repeat center center;
+  background-size: cover;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fffbe8;
+  text-shadow: 2px 2px 8px #768d2f, 0 0 18px #000;
+  margin: 0 -40px 30px -40px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  border: 6px double #a87c38;
+  box-shadow: 0 0 26px 6px #a87c38, 0 0 0 10px #44250460 inset;
+  text-align: center;
+  animation: fadeIn 2s 0.3s backwards;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(80, 50, 15, 0.09);
+  z-index: 1;
+}
+.hero h2 {
+  font-size: 2.6em;
+  z-index: 2;
+  position: relative;
+  font-family: 'UnifrakturCook', 'EB Garamond', 'Georgia', serif;
+  color: #fffbe8;
+  text-shadow: 2px 2px 12px #768d2f, 0 0 40px #000;
+  background: rgba(110, 170, 75, 0.17);
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  filter: drop-shadow(0 0 16px #a87c38);
+  transition: color 0.5s, background 0.7s;
+}
+
+.content h3, .motivation h3, .valeurs h3 {
+  color: #8eaf2e;
+  font-family: 'UnifrakturCook', 'EB Garamond', serif;
+  font-size: 1.6em;
+  margin-bottom: 0.2em;
+  margin-top: 2.2em;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px #fff7e1;
+}
+
+.content p, .motivation p, .content ul, .valeurs ul, .valeurs li {
+  font-size: 1.19em;
+  line-height: 1.7em;
+  letter-spacing: 0.1px;
+  color: #3a2a14;
+  font-family: 'EB Garamond', 'Georgia', serif;
+}
+
+.content ul, .valeurs ul {
+  padding-left: 1.3em;
+  margin-bottom: 1.2em;
+}
+.content ul li, .valeurs ul li {
+  margin-bottom: 0.5em;
+}
+
+.motivation {
+  background: #f7ecd2ee;
+  border: 3px dashed #8eaf2e;
+  border-radius: 22px;
+  margin: 50px 0 20px 0;
+  padding: 28px 32px 18px 32px;
+  box-shadow: 0 0 24px 4px #c5e07e, 0 0 0 8px #7b3f102c inset;
+  animation: fadeIn 2s 0.4s backwards;
+}
+.motivation h3 {
+  margin-top: 0;
+}
+.motivation p {
+  margin-bottom: 14px;
+}
+
+.valeurs {
+  background: #eddec5e6;
+  border: 3px solid #768d2f;
+  border-radius: 22px;
+  margin: 50px 0 20px 0;
+  padding: 28px 32px 18px 32px;
+  box-shadow: 0 0 24px 4px #c5e07e, 0 0 0 8px #7b3f102c inset;
+  animation: fadeIn 2s 0.5s backwards;
+}
+.valeurs h3 {
+  margin-top: 0;
+}
+.valeurs ul {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+.valeurs li {
+  margin-bottom: 1.1em;
+}
+.valeurs strong {
+  color: #8eaf2e;
+  font-weight: bold;
+  font-family: 'UnifrakturCook', 'EB Garamond', serif;
+  font-size: 1.1em;
+  letter-spacing: 0.7px;
+}
+
+.contact-section {
+  text-align: center;
+  margin: 35px 0 0 0;
+  font-size: 1.3em;
+  font-family: 'EB Garamond', serif;
+  color: #768d2f;
+  letter-spacing: 1px;
+  animation: fadeIn 2s 0.6s backwards;
+}
+
+.bottom-home-btn {
+  display: flex;
+  justify-content: center;
+  margin: 45px 0 0 0;
+}
+.bottom-home-btn a {
+  font-family: 'EB Garamond', serif;
+  color: #fff;
+  background: linear-gradient(90deg,#cfdb8b 0%,#8eaf2e 100%);
+  border: 2px solid #cfdb8b;
+  padding: 10px 28px;
+  text-decoration: none;
+  border-radius: 16px;
+  font-size: 1.18em;
+  font-weight: bold;
+  box-shadow: 1px 1px 0 #e7d8b8;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  margin-bottom: 30px;
+}
+.bottom-home-btn a:hover, .bottom-home-btn a:focus {
+  background: #fffbe8;
+  color: #768d2f;
+  transform: scale(1.08);
+}
+
+footer {
+  background: none;
+  color: #768d2f;
+  text-align: center;
+  padding: 20px;
+  font-size: 1em;
+  font-family: 'EB Garamond', serif;
+  letter-spacing: 1px;
+  margin-top: 60px;
+  text-shadow: 1px 1px 4px #fff7e1;
+}
+
+/* Responsive and improvements */
+@media (max-width: 800px) {
+  .parchment-container {
+    padding: 20px 5vw 18px 5vw;
+    border-width: 30px;
+  }
+  .hero {
+    margin: 0 -5vw 30px -5vw;
+    height: 180px;
+  }
+  .hero h2 {
+    font-size: 1.2em;
+    padding: 10px 10vw;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: #e9d7b7;
+}
+::-webkit-scrollbar-thumb {
+  background: #cfdb8b;
+  border-radius: 8px;
+}
